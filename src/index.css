@@ -1,0 +1,416 @@
+:root {
+  /* Background */
+  --bg-primary: #2a3629;
+  --bg-secondary: #1f2b1e;
+
+  /* Panels/Cards */
+  --panel-primary: #d4c9a8;
+  --panel-secondary: #c9b896;
+  --panel-tertiary: #bfb392;
+
+  /* Text */
+  --text-primary: #1a1a1a;
+  --text-secondary: #c9b896;
+  --text-muted: #8a9a88;
+
+  /* Borders */
+  --border-primary: #5a6558;
+
+  /* Threat badges */
+  --threat-5: #6a4a4a;
+  --threat-4: #6a5a3a;
+  --threat-3: #5a5a3a;
+  --threat-1: #4a5a4a;
+
+  /* UI */
+  --accent-primary: #8b5cf6;
+  --focus-ring: #c9b896;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Bestiary Page */
+.bestiary {
+  min-height: 100vh;
+}
+
+.bestiary__hero {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.bestiary__title {
+  font-size: 3rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+}
+
+.bestiary__tagline {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Monster Grid */
+.bestiary__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .bestiary__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .bestiary__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Monster Card */
+.monster-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.monster-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.monster-card:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.monster-card__image {
+  width: 100%;
+  height: 200px;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.monster-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.monster-card__content {
+  padding: 1rem;
+}
+
+.monster-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.monster-card__name {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: bold;
+}
+
+.monster-card__threat {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+.monster-card__threat--1 { background: var(--threat-1); }
+.monster-card__threat--2 { background: var(--threat-1); }
+.monster-card__threat--3 { background: var(--threat-3); }
+.monster-card__threat--4 { background: var(--threat-4); }
+.monster-card__threat--5 { background: var(--threat-5); }
+
+.monster-card__category {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.monster-card__description {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Filter Bar */
+.filter-bar {
+  padding: 1.5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.filter-bar__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* Search Bar */
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-bar__input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.search-bar__input::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.search-bar__input:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.search-bar__clear {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.search-bar__clear:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Filter Pills */
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.filter-pill {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  border-radius: 20px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-pill:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
+.filter-pill--active {
+  background: var(--border-primary);
+  color: var(--text-secondary);
+  border-color: var(--text-secondary);
+}
+
+.filter-pill:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.filter-pill--threat-1 { border-color: var(--threat-1); }
+.filter-pill--threat-2 { border-color: var(--threat-1); }
+.filter-pill--threat-3 { border-color: var(--threat-3); }
+.filter-pill--threat-4 { border-color: var(--threat-4); }
+.filter-pill--threat-5 { border-color: var(--threat-5); }
+
+.filter-pill--threat-1.filter-pill--active { background: var(--threat-1); }
+.filter-pill--threat-2.filter-pill--active { background: var(--threat-1); }
+.filter-pill--threat-3.filter-pill--active { background: var(--threat-3); }
+.filter-pill--threat-4.filter-pill--active { background: var(--threat-4); }
+.filter-pill--threat-5.filter-pill--active { background: var(--threat-5); }
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.empty-state__message {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.empty-state__reset {
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.empty-state__reset:hover {
+  opacity: 0.9;
+}
+
+.empty-state__reset:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Error State */
+.error-state {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.error-state__message {
+  font-size: 1.25rem;
+  color: var(--threat-5);
+}
+
+/* Placeholder Page */
+.placeholder-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.placeholder-page h1 {
+  font-size: 2.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-page__category {
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.placeholder-page__threat {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.placeholder-page__message {
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.placeholder-page__back {
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-primary);
+  transition: border-color 0.2s;
+}
+
+.placeholder-page__back:hover {
+  border-color: var(--text-secondary);
+}
+
+.placeholder-page__back:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Footer */
+.bestiary__footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border-primary);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .bestiary__hero {
+    padding: 2rem 1rem;
+  }
+
+  .bestiary__title {
+    font-size: 2rem;
+  }
+
+  .filter-bar {
+    padding: 1rem;
+  }
+
+  .filter-bar__filters {
+    flex-direction: column;
+  }
+
+  .bestiary__grid {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,52 @@
+installed:
+- grill
+- wiki
+- wireframe
+settings:
+  auto_execute_hooks: true
+hooks:
+  after_specify:
+  - extension: wireframe
+    command: speckit.wireframe.generate
+    enabled: true
+    optional: true
+    priority: 10
+    prompt: Generate wireframes for this feature now?
+    description: Offer wireframe generation after spec creation
+    condition: null
+  before_plan:
+  - extension: wireframe
+    command: speckit.wireframe.review
+    enabled: true
+    optional: true
+    priority: 10
+    prompt: Review and sign off wireframes before planning? (signed-off wireframes
+      become spec constraints)
+    description: Ensure wireframes are reviewed and signed off before plan is written
+    condition: null
+  after_implement:
+  - extension: wireframe
+    command: speckit.wireframe.screenshots
+    enabled: true
+    optional: true
+    priority: 10
+    prompt: Capture implementation screenshots and compare to signed-off wireframes?
+    description: 'Regression check: compare implementation to approved wireframes'
+    condition: null
+  - extension: wiki
+    command: speckit.wiki.ingest
+    enabled: true
+    optional: true
+    priority: 10
+    prompt: Record what this implementation taught into the project wiki?
+    description: Capture implementation learnings into the wiki after implementation
+    condition: null
+  after_plan:
+  - extension: wiki
+    command: speckit.wiki.ingest
+    enabled: true
+    optional: true
+    priority: 10
+    prompt: Ingest this feature's research and plan decisions into the project wiki?
+    description: Compound the feature's verified research into the wiki after planning
+    condition: null

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Monster Details - Cinematic Detail Page - Dark theme (consistent) -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c7ddf5"/>
+      <stop offset="100%" stop-color="#b8d4f0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="960" y="28" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="18" font-weight="700" fill="#4b5563" letter-spacing="1">
+    MONSTER DETAILS - CINEMATIC PAGE
+  </text>
+
+  <!-- Labels -->
+  <text x="40" y="52" fill="#8b5cf6" font-family="system-ui, sans-serif"
+        font-size="18" font-weight="bold">DESKTOP (16:9)</text>
+  <text x="1500" y="52" fill="#d946ef" font-family="system-ui, sans-serif"
+        font-size="15" font-weight="bold">MOBILE</text>
+
+  <!-- ================= DESKTOP (1280x720) ================= -->
+  <g id="desktop" transform="translate(40, 60)">
+    <rect width="1280" height="720" rx="8" fill="#2f3d2e" stroke="#5a6558"/>
+
+    <!-- Hero Section - Full-width image with overlaid text -->
+    <rect x="0" y="0" width="1280" height="400" fill="#1f2b1e"/>
+    <!-- Monster image area -->
+    <rect x="0" y="0" width="1280" height="400" fill="#3d4a3c" opacity="0.6"/>
+    <text x="640" y="200" text-anchor="middle" font-family="system-ui, sans-serif" 
+          font-size="14" fill="#8a9a88">[Monster Image - Full Width]</text>
+    
+    <!-- Overlaid text on hero -->
+    <g transform="translate(60, 320)">
+      <text font-family="Georgia, serif" font-size="48" font-weight="bold" fill="#c9b896">LESHEN</text>
+      <text y="30" font-size="16" fill="#8a9a88">Relicts</text>
+      <rect x="0" y="45" width="40" height="24" rx="12" fill="#6a4a4a"/>
+      <text x="20" y="61" text-anchor="middle" font-size="14" font-weight="bold" fill="#c9b896">5</text>
+      <text y="90" font-size="14" fill="#b8a886" max-width="600">An ancient creature associated with forests, the leshen is a relict that dwells deep within primeval woods.</text>
+    </g>
+
+    <!-- Back navigation -->
+    <text x="60" y="50" font-family="system-ui, sans-serif" font-size="14" fill="#8b5cf6">← Back to Bestiary</text>
+
+    <!-- Information Section - DARK (consistent with hero) -->
+    <rect x="0" y="420" width="1280" height="200" fill="#2f3d2e"/>
+    <text x="60" y="460" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#c9b896">About the Leshen</text>
+    <text x="60" y="490" font-family="system-ui, sans-serif" font-size="14" fill="#b8a886" max-width="1100">The leshen is an ancient creature associated with forests. It commands the beasts of its domain, moves silently between the trees, and is said to be nearly impossible to kill while its forest home remains intact. The leshen appears in folklore across the Northern Realms, often depicted as a guardian of primeval woods.</text>
+
+    <!-- Related Stories Section -->
+    <text x="60" y="650" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#c9b896">Related Stories</text>
+    
+    <!-- Horizontal scrollable story cards -->
+    <g transform="translate(60, 670)">
+      <!-- Story card 1 -->
+      <g>
+        <rect width="200" height="120" rx="8" fill="#1f2b1e" stroke="#5a6558"/>
+        <rect width="200" height="70" rx="8" fill="#4a5548"/>
+        <text x="100" y="40" text-anchor="middle" font-size="12" fill="#8a9a88">IMG</text>
+        <text x="10" y="90" font-size="12" font-weight="bold" fill="#c9b896">The Last Wish</text>
+        <text x="10" y="108" font-size="11" fill="#8a9a88">A story of destiny...</text>
+      </g>
+      <!-- Story card 2 -->
+      <g transform="translate(220, 0)">
+        <rect width="200" height="120" rx="8" fill="#1f2b1e" stroke="#5a6558"/>
+        <rect width="200" height="70" rx="8" fill="#4a5548"/>
+        <text x="100" y="40" text-anchor="middle" font-size="12" fill="#8a9a88">IMG</text>
+        <text x="10" y="90" font-size="12" font-weight="bold" fill="#c9b896">The Edge of the World</text>
+        <text x="10" y="108" font-size="11" fill="#8a9a88">Beyond the known lands...</text>
+      </g>
+      <!-- Story card 3 -->
+      <g transform="translate(440, 0)">
+        <rect width="200" height="120" rx="8" fill="#1f2b1e" stroke="#5a6558"/>
+        <rect width="200" height="70" rx="8" fill="#4a5548"/>
+        <text x="100" y="40" text-anchor="middle" font-size="12" fill="#8a9a88">IMG</text>
+        <text x="10" y="90" font-size="12" font-weight="bold" fill="#c9b896">The Voice of Reason</text>
+        <text x="10" y="108" font-size="11" fill="#8a9a88">Wisdom in dark times...</text>
+      </g>
+    </g>
+
+    <!-- Footer -->
+    <rect x="0" y="660" width="1280" height="60" fill="#1f2b1e"/>
+    <text x="24" y="696" font-family="system-ui, sans-serif" font-size="14" fill="#8a9a88">Monster Details — data-driven from content layer</text>
+
+    <!-- Callouts -->
+    <g class="callout" transform="translate(640, 200)">
+      <circle r="14" fill="#dc2626"/><text y="5" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">1</text>
+    </g>
+    <g class="callout" transform="translate(640, 480)">
+      <circle r="14" fill="#dc2626"/><text y="5" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">2</text>
+    </g>
+    <g class="callout" transform="translate(160, 730)">
+      <circle r="14" fill="#dc2626"/><text y="5" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">3</text>
+    </g>
+    <g class="callout" transform="translate(60, 50)">
+      <circle r="14" fill="#dc2626"/><text y="5" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">4</text>
+    </g>
+  </g>
+
+  <!-- ================= MOBILE (360x720) ================= -->
+  <g id="mobile" transform="translate(1360, 60)">
+    <rect width="360" height="720" rx="24" fill="#2f3d2e" stroke="#5a6558"/>
+
+    <!-- Mobile Hero - Adapted layout -->
+    <rect x="0" y="0" width="360" height="300" fill="#1f2b1e" rx="24"/>
+    <rect x="0" y="0" width="360" height="300" fill="#3d4a3c" opacity="0.6"/>
+    <text x="180" y="150" text-anchor="middle" font-family="system-ui, sans-serif" 
+          font-size="12" fill="#8a9a88">[Monster Image]</text>
+    
+    <!-- Overlaid text on mobile hero -->
+    <g transform="translate(20, 220)">
+      <text font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#c9b896">LESHEN</text>
+      <text y="20" font-size="12" fill="#8a9a88">Relicts</text>
+      <rect x="0" y="30" width="32" height="20" rx="10" fill="#6a4a4a"/>
+      <text x="16" y="44" text-anchor="middle" font-size="12" font-weight="bold" fill="#c9b896">5</text>
+    </g>
+
+    <!-- Back navigation -->
+    <text x="20" y="40" font-family="system-ui, sans-serif" font-size="12" fill="#8b5cf6">← Back</text>
+
+    <!-- Information Section - DARK -->
+    <rect x="0" y="320" width="360" height="180" fill="#2f3d2e"/>
+    <text x="20" y="350" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#c9b896">About the Leshen</text>
+    <text x="20" y="380" font-family="system-ui, sans-serif" font-size="12" fill="#b8a886">The leshen is an ancient creature associated with forests. It commands the beasts of its domain...</text>
+
+    <!-- Related Stories - Horizontal scroll -->
+    <text x="20" y="530" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#c9b896">Related Stories</text>
+    <g transform="translate(20, 550)">
+      <g>
+        <rect width="140" height="90" rx="6" fill="#1f2b1e" stroke="#5a6558"/>
+        <rect width="140" height="50" rx="6" fill="#4a5548"/>
+        <text x="70" y="30" text-anchor="middle" font-size="10" fill="#8a9a88">IMG</text>
+        <text x="8" y="68" font-size="10" font-weight="bold" fill="#c9b896">The Last Wish</text>
+        <text x="8" y="82" font-size="9" fill="#8a9a88">Destiny...</text>
+      </g>
+      <g transform="translate(150, 0)">
+        <rect width="140" height="90" rx="6" fill="#1f2b1e" stroke="#5a6558"/>
+        <rect width="140" height="50" rx="6" fill="#4a5548"/>
+        <text x="70" y="30" text-anchor="middle" font-size="10" fill="#8a9a88">IMG</text>
+        <text x="8" y="68" font-size="10" font-weight="bold" fill="#c9b896">Edge of World</text>
+        <text x="8" y="82" font-size="9" fill="#8a9a88">Beyond...</text>
+      </g>
+    </g>
+
+    <!-- Footer -->
+    <rect x="0" y="664" width="360" height="56" rx="24" fill="#1f2b1e"/>
+    <text x="20" y="697" font-family="system-ui, sans-serif" font-size="14" fill="#8a9a88">Details — About</text>
+
+    <!-- Mobile callouts -->
+    <g class="callout" transform="translate(180, 150)">
+      <circle r="14" fill="#dc2626"/><text y="5" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">1</text>
+    </g>
+    <g class="callout" transform="translate(180, 400)">
+      <circle r="14" fill="#dc2626"/><text y="5" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">2</text>
+    </g>
+    <g class="callout" transform="translate(90, 600)">
+      <circle r="14" fill="#dc2626"/><text y="5" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">3</text>
+    </g>
+    <g class="callout" transform="translate(20, 40)">
+      <circle r="14" fill="#dc2626"/><text y="5" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">4</text>
+    </g>
+  </g>
+
+  <!-- ================= ANNOTATIONS (6 groups, 2 rows x 3) ================= -->
+  <g id="annotations" transform="translate(40, 800)">
+    <rect width="1840" height="220" rx="8" fill="#2f3d2e" stroke="#5a6558"/>
+
+    <!-- Row 1 -->
+    <g font-family="system-ui, sans-serif" fill="#1f2937">
+      <!-- US-001: View Monster Details -->
+      <text x="24" y="24" font-size="14" font-weight="bold">1. View Monster Details</text>
+      <text x="24" y="44" font-size="14" fill="#374151">Full-width hero with overlaid text; cinematic layout.</text>
+      <rect x="24" y="54" width="56" height="22" rx="9" fill="#0891b2"/><text x="52" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">US-001</text>
+      <rect x="88" y="54" width="52" height="22" rx="9" fill="#2563eb"/><text x="114" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">FR-001</text>
+      <rect x="148" y="54" width="52" height="22" rx="9" fill="#2563eb"/><text x="174" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">FR-002</text>
+      <rect x="208" y="54" width="52" height="22" rx="9" fill="#2563eb"/><text x="234" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">FR-004</text>
+      <rect x="268" y="54" width="54" height="22" rx="9" fill="#ea580c"/><text x="295" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">SC-001</text>
+      <rect x="330" y="54" width="54" height="22" rx="9" fill="#ea580c"/><text x="357" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">SC-005</text>
+
+      <!-- US-002: View Related Stories -->
+      <text x="440" y="24" font-size="14" font-weight="bold">2. View Related Stories</text>
+      <text x="440" y="44" font-size="14" fill="#374151">Horizontal scrollable cards with title, summary, image.</text>
+      <rect x="440" y="54" width="56" height="22" rx="9" fill="#0891b2"/><text x="468" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">US-002</text>
+      <rect x="504" y="54" width="52" height="22" rx="9" fill="#2563eb"/><text x="530" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">FR-006</text>
+      <rect x="564" y="54" width="52" height="22" rx="9" fill="#2563eb"/><text x="590" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">FR-007</text>
+      <rect x="624" y="54" width="54" height="22" rx="9" fill="#ea580c"/><text x="651" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">SC-007</text>
+
+      <!-- US-003: Navigate Back -->
+      <text x="740" y="24" font-size="14" font-weight="bold">3. Navigate Back</text>
+      <text x="740" y="44" font-size="14" fill="#374151">Integrated back navigation; visual design.</text>
+      <rect x="740" y="54" width="56" height="22" rx="9" fill="#0891b2"/><text x="768" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">US-003</text>
+      <rect x="804" y="54" width="52" height="22" rx="9" fill="#2563eb"/><text x="830" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">FR-008</text>
+      <rect x="864" y="54" width="54" height="22" rx="9" fill="#ea580c"/><text x="891" y="69" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">SC-008</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g font-family="system-ui, sans-serif" fill="#1f2937">
+      <!-- US-004: Handle Missing Monster -->
+      <text x="24" y="110" font-size="14" font-weight="bold">4. Handle Missing Monster</text>
+      <text x="24" y="130" font-size="14" fill="#374151">Not-found state for invalid IDs; no crash.</text>
+      <rect x="24" y="140" width="56" height="22" rx="9" fill="#0891b2"/><text x="52" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">US-004</text>
+      <rect x="88" y="140" width="52" height="22" rx="9" fill="#2563eb"/><text x="114" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">FR-009</text>
+      <rect x="148" y="140" width="52" height="22" rx="9" fill="#2563eb"/><text x="174" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">FR-010</text>
+      <rect x="208" y="140" width="54" height="22" rx="9" fill="#ea580c"/><text x="235" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">SC-009</text>
+
+      <!-- US-005: Responsive -->
+      <text x="340" y="110" font-size="14" font-weight="bold">5. Responsive</text>
+      <text x="340" y="130" font-size="14" fill="#374151">Desktop/tablet/mobile hero adaptation.</text>
+      <rect x="340" y="140" width="56" height="22" rx="9" fill="#0891b2"/><text x="368" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">US-005</text>
+      <rect x="404" y="140" width="52" height="22" rx="9" fill="#2563eb"/><text x="430" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">FR-012</text>
+      <rect x="464" y="140" width="52" height="22" rx="9" fill="#2563eb"/><text x="490" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">FR-013</text>
+      <rect x="524" y="140" width="54" height="22" rx="9" fill="#ea580c"/><text x="551" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">SC-011</text>
+
+      <!-- US-006: Accessible -->
+      <text x="640" y="110" font-size="14" font-weight="bold">6. Accessible</text>
+      <text x="640" y="130" font-size="14" fill="#374151">Keyboard, focus, labels, alt text, reduced-motion.</text>
+      <rect x="640" y="140" width="56" height="22" rx="9" fill="#0891b2"/><text x="668" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">US-006</text>
+      <rect x="704" y="140" width="52" height="22" rx="9" fill="#2563eb"/><text x="730" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">FR-014</text>
+      <rect x="764" y="140" width="54" height="22" rx="9" fill="#ea580c"/><text x="791" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">SC-012</text>
+    </g>
+  </g>
+
+  <!-- Signature -->
+  <text x="40" y="1060" fill="#4b5563" font-family="system-ui, sans-serif"
+        font-size="18" font-weight="bold">
+    003:01 | Monster Details | SpecKit
+  </text>
+</svg>

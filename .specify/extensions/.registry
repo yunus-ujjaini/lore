@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "extensions": {
+    "grill": {
+      "version": "1.0.0",
+      "source": "local",
+      "manifest_hash": "sha256:44ee63b9ad6e1efaae535b1cbf3e2d742e640ed64b7dbe9c0b2d8b1bf13a6836",
+      "enabled": true,
+      "priority": 10,
+      "registered_commands": {
+        "opencode": [
+          "speckit.grill.grill-me"
+        ]
+      },
+      "registered_skills": [],
+      "installed_at": "2026-08-14T05:50:03.492647+00:00"
+    },
+    "wireframe": {
+      "version": "0.1.1",
+      "source": "local",
+      "manifest_hash": "sha256:246ce4f535c9149c28fa28d38fb7642034b17c44a62d13a59474a2272b753172",
+      "enabled": true,
+      "priority": 10,
+      "registered_commands": {
+        "opencode": [
+          "speckit.wireframe.generate",
+          "speckit.wireframe.prep",
+          "speckit.wireframe.review",
+          "speckit.wireframe.inspect",
+          "speckit.wireframe.screenshots",
+          "speckit.wireframe.view"
+        ]
+      },
+      "registered_skills": [],
+      "installed_at": "2026-08-14T05:51:44.858269+00:00"
+    },
+    "wiki": {
+      "version": "1.0.0",
+      "source": "local",
+      "manifest_hash": "sha256:0b4b9b3b306ccd3cbf9094d93cada6f5b10cafcc79e330867356cda0a53e137a",
+      "enabled": true,
+      "priority": 10,
+      "registered_commands": {
+        "opencode": [
+          "speckit.wiki.init",
+          "speckit.wiki.ingest",
+          "speckit.wiki.query",
+          "speckit.wiki.lint",
+          "speckit.wiki.status"
+        ]
+      },
+      "registered_skills": [],
+      "installed_at": "2026-08-14T05:52:58.372835+00:00"
+    }
+  }
+}
