@@ -6,7 +6,8 @@ interface MonsterCardProps {
 }
 
 export default function MonsterCard({ monster, onClick }: MonsterCardProps) {
-  const imageUrl = `/images/monsters/${monster.image}`;
+  const imageUrl = `${import.meta.env.BASE_URL}images/monsters/${monster.image}`;
+  const fallbackImageUrl = `${import.meta.env.BASE_URL}images/placeholders/missing.png`;
 
   return (
     <article
@@ -27,14 +28,16 @@ export default function MonsterCard({ monster, onClick }: MonsterCardProps) {
           src={imageUrl}
           alt={`${monster.name} illustration`}
           onError={(e) => {
-            const img = e.target as HTMLImageElement;
-            img.src = '/images/placeholders/missing.png';
+            const img = e.currentTarget;
+            img.src = fallbackImageUrl;
           }}
         />
       </div>
+
       <div className="monster-card__content">
         <div className="monster-card__header">
           <h3 className="monster-card__name">{monster.name}</h3>
+
           <span
             className={`monster-card__threat monster-card__threat--${monster.threatLevel}`}
             aria-label={`Threat level ${monster.threatLevel}`}
@@ -42,7 +45,10 @@ export default function MonsterCard({ monster, onClick }: MonsterCardProps) {
             {monster.threatLevel}
           </span>
         </div>
-        <span className="monster-card__category">{monster.category}</span>
+
+        <span className="monster-card__category">
+          {monster.category}
+        </span>
       </div>
     </article>
   );
