@@ -6,7 +6,7 @@
   "description": "Content Foundation & Content Pipeline — static content data with automated validation",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "validate": "vite-node scripts/validate.ts",
     "test": "vitest run",
