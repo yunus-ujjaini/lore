@@ -6,7 +6,7 @@ interface StoryCardProps {
 }
 
 export default function StoryCard({ story, onClick }: StoryCardProps) {
-  const imageUrl = story.image ? `/images/stories/${story.image}` : null;
+  const imageUrl = story.image ? `${import.meta.env.BASE_URL}images/stories/${story.image}` : null;
 
   // Get related monster names
   const relatedMonsterNames = story.monsterIds.length > 0
@@ -34,7 +34,7 @@ export default function StoryCard({ story, onClick }: StoryCardProps) {
             alt={`${story.title} illustration`}
             onError={(e) => {
               const img = e.target as HTMLImageElement;
-              img.src = '/images/placeholders/missing.png';
+              img.src = `${import.meta.env.BASE_URL}images/placeholders/missing.png`;
             }}
           />
         ) : (

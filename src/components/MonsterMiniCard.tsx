@@ -6,7 +6,7 @@ interface MonsterMiniCardProps {
 }
 
 export default function MonsterMiniCard({ monster, onClick }: MonsterMiniCardProps) {
-  const imageUrl = `/images/monsters/${monster.image}`;
+  const imageUrl = `${import.meta.env.BASE_URL}images/monsters/${monster.image}`;
 
   return (
     <article
@@ -28,7 +28,7 @@ export default function MonsterMiniCard({ monster, onClick }: MonsterMiniCardPro
           alt={`${monster.name} illustration`}
           onError={(e) => {
             const img = e.target as HTMLImageElement;
-            img.src = '/images/placeholders/missing.png';
+            img.src = `${import.meta.env.BASE_URL}images/placeholders/missing.png`;
           }}
         />
       </div>

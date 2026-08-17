@@ -35,7 +35,7 @@ export default function StoryReaderPage() {
     return <NotFoundStory storyId={id} />;
   }
 
-  const imageUrl = story.image ? `/images/stories/${story.image}` : null;
+  const imageUrl = story.image ? `${import.meta.env.BASE_URL}images/stories/${story.image}` : null;
 
   // Get sections (support both legacy content and new sections format)
   const sections = story.sections || (story.content ? [{ id: 'section-1', title: story.title, content: story.content }] : []);
@@ -70,7 +70,7 @@ export default function StoryReaderPage() {
               transition={{ duration: 2, ease: 'easeOut' }}
               onError={(e) => {
                 const img = e.target as HTMLImageElement;
-                img.src = '/images/placeholders/missing.png';
+                img.src = `${import.meta.env.BASE_URL}images/placeholders/missing.png`;
               }}
             />
           )}

@@ -6,7 +6,7 @@ interface MonsterHeroProps {
 }
 
 export default function MonsterHero({ monster }: MonsterHeroProps) {
-  const imageUrl = `/images/monsters/${monster.image}`;
+  const imageUrl = `${import.meta.env.BASE_URL}images/monsters/${monster.image}`;
 
   return (
     <section className="monster-hero">
@@ -19,7 +19,7 @@ export default function MonsterHero({ monster }: MonsterHeroProps) {
         transition={{ duration: 2, ease: 'easeOut' }}
         onError={(e) => {
           const img = e.target as HTMLImageElement;
-          img.src = '/images/placeholders/missing.png';
+          img.src = `${import.meta.env.BASE_URL}images/placeholders/missing.png`;
         }}
       />
       <div className="monster-hero__overlay" />
