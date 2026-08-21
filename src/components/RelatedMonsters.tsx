@@ -20,7 +20,7 @@ export default function RelatedMonsters({ monsters, onMonsterClick }: RelatedMon
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="related-monsters__title">Related Monsters</h2>
+      <h2 className="related-monsters__title">Monsters of this Tale</h2>
       <div className="related-monsters__scroll">
         {monsters.map((monster) => (
           <MonsterMiniCard key={monster.id} monster={monster} onClick={onMonsterClick} />

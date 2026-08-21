@@ -10,3 +10,4 @@ Sources are immutable inputs — the wiki never edits them.
 | S003 | specs/001-content-foundation/research.md + plan.md (decision sections) | feature-artifact | 2026-08-14 | 2026-08-14 | tech-stack, authoring-workflow, content-model, content-validation |
 | S004 | specs/002-bestiary-explorer/research.md + plan.md (decision sections) | feature-artifact | 2026-08-14 | 2026-08-14 | tech-stack, browser-safe-content-loader, filter-state-management |
 | S005 | specs/003-monster-details/research.md + plan.md (decision sections) | feature-artifact | 2026-08-14 | 2026-08-14 | tech-stack, animation-patterns |
+| S006 | specs/005-story-details-experience/research.md + plan.md (decision sections) | feature-artifact | 2026-08-17 | 2026-08-17 | animation-patterns, tech-stack, story-reader-component |

@@ -14,6 +14,9 @@ page files, not here.
 - [filter-state-management](./pages/filter-state-management.md) — React state + sessionStorage, debounced search, combined filters
 - [animation-patterns](./pages/animation-patterns.md) — Framer Motion scroll-triggered effects, parallax, text reveal, reduced-motion
 
+## component
+- [story-reader-component](./pages/story-reader-component.md) — cinematic story reading experience with hero, progress bar, sections, navigation
+
 ## howto
 - [authoring-workflow](./pages/authoring-workflow.md) — agent-driven dataset authoring, post-hoc review, expansion
 - [content-validation](./pages/content-validation.md) — validation rules, commands, E2E rationale

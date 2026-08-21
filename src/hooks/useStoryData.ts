@@ -14,9 +14,17 @@ export function useStoryData(stories: Record<string, Story>) {
     );
   };
 
+  const getNextStory = (currentId: string): Story | undefined => {
+    const otherStories = storyList.filter(s => s.id !== currentId);
+    if (otherStories.length === 0) return undefined;
+    const randomIndex = Math.floor(Math.random() * otherStories.length);
+    return otherStories[randomIndex];
+  };
+
   return {
     stories: storyList,
     getStoryById,
     getRelatedStories,
+    getNextStory,
   };
 }

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Wireframe: Story Details - Cinematic Reading Experience -->
+<!-- Feature: 005-story-details-experience | Theme: dark | v3 -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="hero-overlay" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(15,23,42,0.0)"/>
+      <stop offset="40%" stop-color="rgba(15,23,42,0.3)"/>
+      <stop offset="100%" stop-color="rgba(15,23,42,0.95)"/>
+    </linearGradient>
+    <linearGradient id="fog-transition" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(26,36,25,0.0)"/>
+      <stop offset="50%" stop-color="rgba(26,36,25,0.4)"/>
+      <stop offset="100%" stop-color="rgba(26,36,25,0.0)"/>
+    </linearGradient>
+    <linearGradient id="ending-darken" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(15,23,42,0.0)"/>
+      <stop offset="100%" stop-color="rgba(15,23,42,0.6)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- CENTERED TITLE -->
+  <text x="960" y="28" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="18" font-weight="700" fill="#94a3b8" letter-spacing="1">
+    STORY DETAILS - CINEMATIC READING EXPERIENCE
+  </text>
+
+  <!-- Section labels -->
+  <text x="40" y="52" fill="#8b5cf6" font-family="system-ui, sans-serif"
+        font-size="18" font-weight="bold">DESKTOP (16:9)</text>
+  <text x="1500" y="52" fill="#d946ef" font-family="system-ui, sans-serif"
+        font-size="15" font-weight="bold">MOBILE</text>
+
+  <!-- ==================== DESKTOP (1280x720) ==================== -->
+  <g id="desktop" transform="translate(40, 60)">
+    <!-- Single continuous dark background — no section color blocks -->
+    <rect width="1280" height="720" rx="8" fill="#1a2419" stroke="#475569"/>
+
+    <!-- ① Progress bar - thin purple line at top -->
+    <rect x="0" y="0" width="420" height="4" fill="#8b5cf6" rx="0"/>
+
+    <!-- ② Hero section — dark atmospheric with image placeholder -->
+    <rect x="0" y="4" width="1280" height="320" fill="#151f14"/>
+    <rect x="0" y="4" width="1280" height="320" fill="#2d3d2c" opacity="0.35"/>
+    <!-- ④ Atmospheric overlay gradient -->
+    <rect x="0" y="4" width="1280" height="320" fill="url(#hero-overlay)"/>
+    <!-- ③ Title and summary -->
+    <text x="80" y="270" font-family="Georgia, serif" font-size="36" font-weight="bold" fill="#c9b896">The Striga of Maribor</text>
+    <text x="80" y="300" font-family="Georgia, serif" font-size="16" fill="#b8a886" opacity="0.9">A witcher descends into the catacombs to break a curse that has haunted the city for generations.</text>
+
+    <!-- ⑤⑥ Reading content — continuous background, NO solid section blocks -->
+
+    <!-- Section I — content on the left, HUGE Roman numeral watermark on right -->
+    <text x="80" y="395" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#c9b896">The Commission</text>
+    <!-- ⑦ Ornamental divider below title -->
+    <line x1="80" y1="410" x2="300" y2="410" stroke="#5a6558" stroke-width="1"/>
+    <circle cx="190" cy="410" r="3" fill="#5a6558"/>
+    <!-- ⑧ Drop cap + body text -->
+    <text x="80" y="460" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="#c9b896">T</text>
+    <text x="118" y="448" font-family="Georgia, serif" font-size="15" fill="#b8a886">he king's advisor promised a handsome purse for freeing the vaults. The task seemed simple enough:</text>
+    <text x="80" y="476" font-family="Georgia, serif" font-size="15" fill="#b8a886">descend into the crypts, slay the beast, return with proof. The witcher had done worse for less.</text>
+    <text x="80" y="502" font-family="Georgia, serif" font-size="15" fill="#b8a886">He adjusted his medallion and studied the entrance to the catacombs, its iron door scarred by centuries.</text>
+    <!-- ⑭ HUGE Roman numeral watermark — right-aligned far right -->
+    <text x="1200" y="520" text-anchor="end" font-family="Georgia, serif" font-size="180" font-weight="bold" fill="#1f2b1e" opacity="0.3">I</text>
+
+    <!-- ⑨ Fog/gradient transition between sections — subtle overlay, not a solid block -->
+    <rect x="0" y="530" width="1280" height="40" fill="url(#fog-transition)"/>
+
+    <!-- Section II — same continuous background -->
+    <text x="80" y="590" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#c9b896">The Creature</text>
+    <line x1="80" y1="605" x2="280" y2="605" stroke="#5a6558" stroke-width="1"/>
+    <circle cx="180" cy="605" r="3" fill="#5a6558"/>
+    <text x="80" y="645" font-family="Georgia, serif" font-size="15" fill="#b8a886">The creature within was not a monster in the usual sense — it was the cursed daughter of the late king.</text>
+    <text x="80" y="671" font-family="Georgia, serif" font-size="15" fill="#b8a886">She moved through the darkness like water through a sieve, silent and terrible.</text>
+    <!-- ⑭ HUGE Roman numeral watermark — right-aligned far right -->
+    <text x="1200" y="680" text-anchor="end" font-family="Georgia, serif" font-size="180" font-weight="bold" fill="#1f2b1e" opacity="0.3">II</text>
+
+    <!-- ⑩ Ending — gradient darken + heavier ornamental divider -->
+    <rect x="0" y="690" width="1280" height="30" fill="url(#ending-darken)"/>
+    <line x1="80" y1="710" x2="400" y2="710" stroke="#5a6558" stroke-width="2"/>
+    <circle cx="240" cy="710" r="4" fill="#5a6558"/>
+    <line x1="200" y1="710" x2="280" y2="710" stroke="#5a6558" stroke-width="1"/>
+
+    <!-- ⑪ Related monsters section -->
+    <rect x="0" y="720" width="1280" height="30" fill="#151f14" opacity="0.5"/>
+    <text x="80" y="740" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#8a9a88">MONSTERS OF THIS TALE</text>
+
+    <!-- ⑫ Navigation area -->
+    <rect x="0" y="720" width="1280" height="30" fill="#1a2419" opacity="0.3"/>
+  </g>
+
+  <!-- ==================== MOBILE (360x720) ==================== -->
+  <g id="mobile" transform="translate(1360, 60)">
+    <rect width="360" height="720" rx="24" fill="#1a2419" stroke="#475569"/>
+
+    <!-- Header / status bar -->
+    <rect x="0" y="0" width="360" height="54" rx="24" fill="#151f14"/>
+    <rect x="0" y="30" width="360" height="24" fill="#151f14"/>
+    <text x="20" y="48" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#c9b896">← Back</text>
+
+    <!-- ① Progress bar mobile -->
+    <rect x="0" y="54" width="120" height="3" fill="#8b5cf6"/>
+
+    <!-- ② Hero mobile -->
+    <rect x="0" y="57" width="360" height="190" fill="#2d3d2c" opacity="0.35"/>
+    <rect x="0" y="57" width="360" height="190" fill="url(#hero-overlay)"/>
+    <text x="20" y="215" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#c9b896">The Striga of Maribor</text>
+    <text x="20" y="238" font-family="Georgia, serif" font-size="12" fill="#b8a886">A witcher descends into the catacombs...</text>
+
+    <!-- ⑤⑥ Reading content mobile — continuous background -->
+    <text x="20" y="290" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#c9b896">The Commission</text>
+    <line x1="20" y1="302" x2="160" y2="302" stroke="#5a6558" stroke-width="1"/>
+    <circle cx="90" cy="302" r="2" fill="#5a6558"/>
+    <!-- ⑧ Drop cap mobile -->
+    <text x="20" y="340" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#c9b896">T</text>
+    <text x="50" y="330" font-family="Georgia, serif" font-size="13" fill="#b8a886">he king's advisor promised a handsome purse</text>
+    <text x="20" y="358" font-family="Georgia, serif" font-size="13" fill="#b8a886">for freeing the vaults. The task seemed simple.</text>
+    <!-- ⑭ Roman numeral watermark mobile — right-aligned -->
+    <text x="330" y="380" text-anchor="end" font-family="Georgia, serif" font-size="80" font-weight="bold" fill="#1f2b1e" opacity="0.25">I</text>
+
+    <!-- ⑨ Fog transition mobile -->
+    <rect x="0" y="390" width="360" height="20" fill="url(#fog-transition)"/>
+
+    <!-- Section II mobile -->
+    <text x="20" y="430" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#c9b896">The Creature</text>
+    <line x1="20" y1="442" x2="150" y2="442" stroke="#5a6558" stroke-width="1"/>
+    <circle cx="85" cy="442" r="2" fill="#5a6558"/>
+    <text x="20" y="475" font-family="Georgia, serif" font-size="13" fill="#b8a886">The creature within was not a monster in the usual sense — it was the cursed daughter.</text>
+    <text x="330" y="490" text-anchor="end" font-family="Georgia, serif" font-size="80" font-weight="bold" fill="#1f2b1e" opacity="0.25">II</text>
+
+    <!-- ⑨ Ending gradient darken mobile -->
+    <rect x="0" y="500" width="360" height="20" fill="url(#ending-darken)"/>
+    <line x1="20" y1="520" x2="200" y2="520" stroke="#5a6558" stroke-width="2"/>
+    <circle cx="110" cy="520" r="3" fill="#5a6558"/>
+
+    <!-- ⑩ Related monsters mobile -->
+    <rect x="0" y="540" width="360" height="50" fill="#151f14" opacity="0.4"/>
+    <text x="20" y="565" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#8a9a88">MONSTERS OF THIS TALE</text>
+
+    <!-- Monster cards mobile -->
+    <rect x="20" y="580" width="80" height="50" rx="4" fill="#2d3d2c" stroke="#5a6558"/>
+    <rect x="110" y="580" width="80" height="50" rx="4" fill="#2d3d2c" stroke="#5a6558"/>
+    <rect x="200" y="580" width="80" height="50" rx="4" fill="#2d3d2c" stroke="#5a6558"/>
+
+    <!-- ⑪ Navigation mobile -->
+    <rect x="0" y="650" width="360" height="70" rx="24" fill="#151f14" opacity="0.6"/>
+    <text x="20" y="680" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#c9b896">Next Tale →</text>
+    <text x="20" y="700" font-family="system-ui, sans-serif" font-size="12" fill="#8a9a88">Return to Stories · Explore Bestiary</text>
+  </g>
+
+  <!-- ==================== ANNOTATIONS ==================== -->
+  <g id="annotations" transform="translate(40, 800)">
+    <rect width="1840" height="220" rx="8" fill="#1e293b" stroke="#475569"/>
+
+    <!-- Row 1 -->
+    <text x="20" y="24" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#e2e8f0">① Comfortable Long-Form Reading</text>
+    <text x="20" y="40" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Body text sized for comfort, constrained reading column (60-80 chars), generous line height</text>
+    <rect x="20" y="48" width="52" height="18" rx="9" fill="#0891b2"/><text x="28" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">US-001</text>
+    <rect x="78" y="48" width="52" height="18" rx="9" fill="#2563eb"/><text x="86" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-005</text>
+    <rect x="136" y="48" width="52" height="18" rx="9" fill="#2563eb"/><text x="144" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-006</text>
+    <rect x="194" y="48" width="52" height="18" rx="9" fill="#ea580c"/><text x="202" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">SC-001</text>
+
+    <text x="460" y="24" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#e2e8f0">② Cinematic Story Introduction</text>
+    <text x="460" y="40" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Hero with story image, title, summary, atmospheric overlay gradient</text>
+    <rect x="460" y="48" width="52" height="18" rx="9" fill="#0891b2"/><text x="468" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">US-002</text>
+    <rect x="518" y="48" width="52" height="18" rx="9" fill="#2563eb"/><text x="526" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-001</text>
+    <rect x="576" y="48" width="52" height="18" rx="9" fill="#2563eb"/><text x="584" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-002</text>
+    <rect x="634" y="48" width="52" height="18" rx="9" fill="#2563eb"/><text x="642" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-004</text>
+    <rect x="692" y="48" width="52" height="18" rx="9" fill="#ea580c"/><text x="700" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">SC-002</text>
+
+    <text x="920" y="24" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#e2e8f0">③ Visual Rhythm &amp; Transitions</text>
+    <text x="920" y="40" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Huge Roman numeral watermarks, ornamental dividers, gradient fog transitions</text>
+    <rect x="920" y="48" width="52" height="18" rx="9" fill="#0891b2"/><text x="928" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">US-003</text>
+    <rect x="978" y="48" width="52" height="18" rx="9" fill="#2563eb"/><text x="986" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-007</text>
+    <rect x="1036" y="48" width="52" height="18" rx="9" fill="#2563eb"/><text x="1044" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-008</text>
+    <rect x="1094" y="48" width="52" height="18" rx="9" fill="#2563eb"/><text x="1102" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-013</text>
+    <rect x="1152" y="48" width="52" height="18" rx="9" fill="#2563eb"/><text x="1160" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-025</text>
+
+    <text x="1400" y="24" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#e2e8f0">④ Reading Progress</text>
+    <text x="1400" y="40" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Thin bar at viewport top, proportional scroll update</text>
+    <rect x="1400" y="48" width="52" height="18" rx="9" fill="#0891b2"/><text x="1408" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">US-004</text>
+    <rect x="1458" y="48" width="52" height="18" rx="9" fill="#2563eb"/><text x="1466" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-009</text>
+    <rect x="1516" y="48" width="52" height="18" rx="9" fill="#ea580c"/><text x="1524" y="61" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">SC-003</text>
+
+    <!-- Row 2 -->
+    <text x="20" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#e2e8f0">⑤ Related Monsters &amp; Continuation</text>
+    <text x="20" y="116" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">"Monsters of this Tale" section, Next Tale card, navigation links</text>
+    <rect x="20" y="124" width="52" height="18" rx="9" fill="#0891b2"/><text x="28" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">US-005</text>
+    <rect x="78" y="124" width="52" height="18" rx="9" fill="#2563eb"/><text x="86" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-010</text>
+    <rect x="136" y="124" width="52" height="18" rx="9" fill="#2563eb"/><text x="144" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-011</text>
+    <rect x="194" y="124" width="52" height="18" rx="9" fill="#2563eb"/><text x="202" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-012</text>
+    <rect x="252" y="124" width="52" height="18" rx="9" fill="#2563eb"/><text x="260" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-026</text>
+    <rect x="310" y="124" width="52" height="18" rx="9" fill="#2563eb"/><text x="318" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-027</text>
+    <rect x="368" y="124" width="52" height="18" rx="9" fill="#ea580c"/><text x="376" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">SC-004</text>
+
+    <text x="620" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#e2e8f0">⑥ Responsive Reading</text>
+    <text x="620" y="116" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Mobile hero, readable text, no horizontal overflow</text>
+    <rect x="620" y="124" width="52" height="18" rx="9" fill="#0891b2"/><text x="628" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">US-006</text>
+    <rect x="678" y="124" width="52" height="18" rx="9" fill="#2563eb"/><text x="686" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-014</text>
+    <rect x="736" y="124" width="52" height="18" rx="9" fill="#2563eb"/><text x="744" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-021</text>
+    <rect x="794" y="124" width="52" height="18" rx="9" fill="#ea580c"/><text x="802" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">SC-006</text>
+
+    <text x="1020" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#e2e8f0">⑦ Reduced Motion</text>
+    <text x="1020" y="116" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">No scroll animations, no parallax, no particles</text>
+    <rect x="1020" y="124" width="52" height="18" rx="9" fill="#0891b2"/><text x="1028" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">US-007</text>
+    <rect x="1078" y="124" width="52" height="18" rx="9" fill="#2563eb"/><text x="1086" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-015</text>
+    <rect x="1136" y="124" width="52" height="18" rx="9" fill="#2563eb"/><text x="1144" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">FR-024</text>
+    <rect x="1194" y="124" width="52" height="18" rx="9" fill="#ea580c"/><text x="1202" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">SC-005</text>
+  </g>
+
+  <!-- SIGNATURE -->
+  <text x="40" y="1060" fill="#94a3b8" font-family="system-ui, sans-serif"
+        font-size="18" font-weight="bold">
+    005:01 | Story Details Experience | Lore Bestiary
+  </text>
+</svg>

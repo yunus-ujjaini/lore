@@ -1,8 +1,8 @@
 ---
 title: Tech stack
 type: decision
-sources: [S003, S004, S005]
-updated: 2026-08-14
+sources: [S003, S004, S005, S006]
+updated: 2026-08-17
 ---
 
 # Tech stack
@@ -32,6 +32,9 @@ runtime dependencies. (S003)
   co-located styles for components (S004).
 - **Vitest + React Testing Library** — component and hook testing for UI features (S004).
 - **Framer Motion (^11.0)** — animation library for cinematic effects (parallax, scroll-triggered, text reveal); chosen over CSS-only (limited), GSAP (heavy), React Spring (less docs) (S005).
+- **jsdom** — required for Vitest component tests with React Testing Library (S006).
+- **TDD approach** — tests written before implementation for each component; Vitest for unit/component tests, Playwright for E2E (S006).
+- **Separate vitest.config.ts** — Vitest config separated from vite.config.ts to avoid TS errors with the `test` property (S006).
 
 ## Constraints
 
@@ -41,6 +44,8 @@ runtime dependencies. (S003)
   `public/images/`; validation lives in `src/validation/` (S003).
 - UI consumes content via build-time `import.meta.glob` (not runtime fetch) (S004).
 - Static hosting requires SPA fallback for react-router-dom BrowserRouter (S004).
+- Framer Motion import is `framer-motion` (not `motion/react`) (S006).
 
 Related: [content-model](./content-model.md), [content-validation](./content-validation.md),
-[browser-safe-content-loader](./browser-safe-content-loader.md).
+[browser-safe-content-loader](./browser-safe-content-loader.md),
+[animation-patterns](./animation-patterns.md).
