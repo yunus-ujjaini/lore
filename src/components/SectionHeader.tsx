@@ -1,21 +1,18 @@
-const ROMAN_numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X',
-  'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX'];
-
 interface SectionHeaderProps {
   index: number;
   title: string;
+  isActive?: boolean;
 }
 
-export default function SectionHeader({ index, title }: SectionHeaderProps) {
-  const numeral = ROMAN_numerals[index] || String(index + 1);
-
+export default function SectionHeader({ index, title, isActive = false }: SectionHeaderProps) {
   return (
-    <div className="section-header">
-      <span className="section-header__numeral" aria-hidden="true">{numeral}</span>
-      <h2 className="section-header__title">{title}</h2>
-      <div className="section-header__divider">
-        <span className="section-header__diamond" />
-      </div>
+    <div style={{ marginBottom: '1.5rem' }}>
+      <p style={{ fontFamily: "'Cinzel', serif", fontSize: '0.6rem', letterSpacing: '0.25em', color: isActive ? '#b8852a' : '#5a4e3a', textTransform: 'uppercase', marginBottom: '0.4rem', transition: 'color 0.3s' }}>
+        Chapter {index + 1}
+      </p>
+      <h2 style={{ fontFamily: "'Cinzel', serif", fontSize: '1.3rem', fontWeight: 600, color: isActive ? '#ddd0b8' : '#9a8d7a', letterSpacing: '0.04em', lineHeight: 1.3, transition: 'color 0.3s' }}>
+        {title}
+      </h2>
     </div>
   );
 }

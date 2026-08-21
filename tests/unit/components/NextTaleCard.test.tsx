@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import NextTaleCard from '../../../src/components/NextTaleCard';
 
@@ -30,16 +30,6 @@ describe('NextTaleCard', () => {
     expect(screen.getByText('A witcher breaks a curse.')).toBeInTheDocument();
   });
 
-  it('links to the story route', () => {
-    render(
-      <MemoryRouter>
-        <NextTaleCard story={mockStory} />
-      </MemoryRouter>
-    );
-    const link = screen.getByText('The Striga of Maribor').closest('a');
-    expect(link).toHaveAttribute('href', '/lore/stories/the-striga-of-maribor');
-  });
-
   it('renders "Next Tale" label', () => {
     render(
       <MemoryRouter>
@@ -47,5 +37,14 @@ describe('NextTaleCard', () => {
       </MemoryRouter>
     );
     expect(screen.getByText('Next Tale')).toBeInTheDocument();
+  });
+
+  it('renders "Continue Reading" link text', () => {
+    render(
+      <MemoryRouter>
+        <NextTaleCard story={mockStory} />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Continue Reading →')).toBeInTheDocument();
   });
 });

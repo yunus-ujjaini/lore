@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import type { Story } from '../validation/schema';
 
 interface NextTaleCardProps {
@@ -6,35 +6,31 @@ interface NextTaleCardProps {
 }
 
 export default function NextTaleCard({ story }: NextTaleCardProps) {
-  const imageUrl = story.image
-    ? `${import.meta.env.BASE_URL}images/stories/${story.image}`
-    : null;
+  const navigate = useNavigate();
 
   return (
-    <Link
-      to={`/lore/stories/${story.id}`}
-      className="next-tale-card"
+    <div
+      onClick={() => navigate(`/stories/${story.id}`)}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(`/stories/${story.id}`); } }}
+      tabIndex={0}
+      role="link"
       aria-label={`Next Tale: ${story.title}`}
+      style={{ background: '#100e14', border: '1px solid #2e2530', padding: '2rem', cursor: 'pointer', transition: 'border-color 0.25s' }}
+      onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.borderColor = '#8b1a1a'; }}
+      onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.borderColor = '#2e2530'; }}
     >
-      <span className="next-tale-card__label">Next Tale</span>
-      <div className="next-tale-card__content">
-        {imageUrl && (
-          <img
-            src={imageUrl}
-            alt={`${story.title} illustration`}
-            className="next-tale-card__image"
-            onError={(e) => {
-              const img = e.target as HTMLImageElement;
-              img.src = `${import.meta.env.BASE_URL}images/placeholders/missing.png`;
-            }}
-          />
-        )}
-        <div className="next-tale-card__text">
-          <h3 className="next-tale-card__title">{story.title}</h3>
-          <p className="next-tale-card__summary">{story.summary}</p>
-        </div>
-      </div>
-      <span className="next-tale-card__arrow">→</span>
-    </Link>
+      <p style={{ fontFamily: "'Cinzel', serif", fontSize: '0.6rem', letterSpacing: '0.3em', color: '#7a6d5a', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+        Next Tale
+      </p>
+      <h4 style={{ fontFamily: "'Cinzel', serif", fontSize: '1.1rem', color: '#ddd0b8', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
+        {story.title}
+      </h4>
+      <p style={{ fontFamily: "'Crimson Text', Georgia, serif", fontSize: '0.95rem', color: '#7a6d5a', lineHeight: 1.5, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+        {story.summary}
+      </p>
+      <p style={{ fontFamily: "'Cinzel', serif", fontSize: '0.65rem', letterSpacing: '0.15em', color: '#8b1a1a', textTransform: 'uppercase', marginTop: '1rem' }}>
+        Continue Reading →
+      </p>
+    </div>
   );
 }

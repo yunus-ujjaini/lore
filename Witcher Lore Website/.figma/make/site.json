@@ -1,0 +1,10 @@
+{
+  "description": "Explore the rich lore of the Witcher universe with a comprehensive bestiary and story directory, featuring detailed monster profiles and engaging tales.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

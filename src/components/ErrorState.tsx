@@ -3,7 +3,7 @@ interface ErrorStateProps {
 }
 
 export default function ErrorState({
-  message = 'Failed to load monster data. Please try again later.',
+  message = 'Something went wrong. Please try again later.',
 }: ErrorStateProps) {
   return (
     <div className="error-state" role="alert">

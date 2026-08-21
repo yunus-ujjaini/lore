@@ -31,6 +31,8 @@ export function createMonsterSchema(categoryList: readonly string[]) {
       threatLevel: threatLevelRef,
       description: z.string().min(1, 'required'),
       image: imageRef,
+      lore: z.string().optional(),
+      weaknesses: z.array(z.string()).optional(),
     })
     .strict();
 }

@@ -1,9 +1,11 @@
 <!--
 Sync Impact Report
-- Version change: unratified template → 1.0.0 (initial ratification)
-- Modified principles: none (no prior ratified content)
-- Added sections: Core Principles I–XII; Section 2: Automated Quality &
-  Testing Standards; Section 3: Definition of Done; Governance
+- Version change: 1.0.0 → 1.1.0
+- Modified principles: II. Visual-First User Experience (expanded to name
+  Design.md and the Witcher Lore Website folder as the canonical design
+  sources); Definition of Done (design-consistency item now cites the
+  sources); Governance (added design-reference compliance rule)
+- Added sections: none
 - Removed sections: none
 - Follow-up TODOs: none
 -->
@@ -22,9 +24,13 @@ of truth.
 ### II. Visual-First User Experience
 
 Visual hierarchy, spacing, typography, imagery, transitions, and motion MUST
-be deliberately designed. New UI MUST preserve the established visual
-language; functionality is NOT complete if the result is technically correct
-but visually inconsistent with the approved design.
+be deliberately designed. `Design.md` and the `Witcher Lore Website/` folder
+(the Figma-sourced reference implementation) are the canonical sources of
+truth for layout, design, typography, animations, and all visual language.
+UI work MUST consult these references before implementation; new UI MUST
+preserve the established visual language; functionality is NOT complete if
+the result is technically correct but visually inconsistent with the
+approved design.
 
 ### III. Component & Design-System Reuse
 
@@ -114,7 +120,8 @@ A feature is done only when ALL of the following hold:
 - Spec is documented and the implementation matches it.
 - Automated tests exist, were written alongside the feature, and pass
   (Playwright E2E covers critical user journeys).
-- UI is visually consistent with the approved design language.
+- UI layout, typography, and animations follow the approved design language
+  as defined in `Design.md` and the `Witcher Lore Website/` reference.
 - Repeated UI patterns use shared components, not duplicated markup.
 - Monster/story content comes from structured data, not hardcoded markup.
 - Keyboard navigation, alt text, accessible control names/states, and
@@ -140,8 +147,11 @@ including automated ones.
 - **Compliance review**: Reviews and PR checks MUST verify compliance with
   this constitution. Passing tests are the primary compliance evidence for
   behavior, accessibility, and quality requirements.
+- **Design reference**: Layout, typography, animation, and visual-language
+  decisions MUST cite `Design.md` and the `Witcher Lore Website/` folder as
+  the authoritative sources; deviations MUST be raised, not silently chosen.
 - **Ambiguity**: If a requirement conflicts with this constitution or is
   ambiguous about its scope, the ambiguity MUST be surfaced before work
   proceeds; it MUST NOT be resolved by silent guessing.
 
-**Version**: 1.0.0 | **Ratified**: 2026-08-14 | **Last Amended**: 2026-08-14
+**Version**: 1.1.0 | **Ratified**: 2026-08-14 | **Last Amended**: 2026-08-21

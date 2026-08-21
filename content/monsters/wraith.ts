@@ -6,4 +6,7 @@ export default {
   description:
     'The restless spirit of one who died with a wrong left unavenged. Wraiths appear at the sites of their deaths, clad in shrouds, and are little more than echoes until drawn to the living by rage.',
   image: 'wraith.png',
+
+  lore: 'Wraiths are echoes of the dead, bound to the mortal plane by unfinished business. They phase through solid matter and drain the warmth from living flesh. Only magical weapons can harm them, and laying the spirit to rest requires resolving the wrong that binds them.',
+  weaknesses: ['Yrden', 'Specter Oil', 'Moon Dust'],
 };

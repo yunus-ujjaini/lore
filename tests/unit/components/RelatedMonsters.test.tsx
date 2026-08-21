@@ -1,13 +1,8 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 
-vi.mock('framer-motion', () => ({
-  motion: {
-    section: ({ children, ...props }: any) => {
-      const { initial, animate, exit, transition, whileInView, viewport, ...rest } = props;
-      return <section {...rest}>{children}</section>;
-    },
-  },
+vi.mock('../../../src/components/FilterBar', () => ({
+  CATEGORY_COLORS: { Necrophages: '#3a5a1a', Specters: '#1a2a5a' },
 }));
 
 import RelatedMonsters from '../../../src/components/RelatedMonsters';
@@ -18,12 +13,12 @@ const mockMonsters = [
 ];
 
 describe('RelatedMonsters', () => {
-  it('renders "Monsters of this Tale" heading', () => {
+  it('renders "Monsters Encountered" heading', () => {
     render(<RelatedMonsters monsters={mockMonsters} onMonsterClick={vi.fn()} />);
-    expect(screen.getByText('Monsters of this Tale')).toBeInTheDocument();
+    expect(screen.getByText('Monsters Encountered')).toBeInTheDocument();
   });
 
-  it('renders monster cards', () => {
+  it('renders monster names', () => {
     render(<RelatedMonsters monsters={mockMonsters} onMonsterClick={vi.fn()} />);
     expect(screen.getByText('Alghoul')).toBeInTheDocument();
     expect(screen.getByText('Wraith')).toBeInTheDocument();

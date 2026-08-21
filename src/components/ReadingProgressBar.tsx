@@ -12,7 +12,7 @@ export default function ReadingProgressBar() {
   if (shouldReduceMotion) {
     return (
       <div
-        className="reading-progress-bar"
+        className="progress-bar"
         role="progressbar"
         aria-label="Reading progress"
       />
@@ -21,7 +21,7 @@ export default function ReadingProgressBar() {
 
   return (
     <motion.div
-      className="reading-progress-bar"
+      className="progress-bar"
       style={{ scaleX }}
       role="progressbar"
       aria-label="Reading progress"
