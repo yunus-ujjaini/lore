@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test';
 import { validateDataset } from '../../src/validation/validate';
 
 const ALLOWED_CONTENT_TYPES = ['image/webp', 'image/jpeg', 'image/png'];
+const BASE_URL = 'http://localhost:5173/lore';
 
 test.describe('Served content pipeline (research R8, FR-022/FR-023)', () => {
   test('every content image URL serves 200 with an allowlisted content type', async ({ request }) => {
@@ -11,9 +12,16 @@ test.describe('Served content pipeline (research R8, FR-022/FR-023)', () => {
     // serving checks are only meaningful for a valid dataset.
     expect(result.errors).toEqual([]);
 
+    const toCheck = (image: string, kind: 'monster' | 'story'): { url: string; path: string } => {
+      const dir = kind === 'monster' ? 'monsters' : 'stories';
+      return image.startsWith('placeholders/')
+        ? { url: `${BASE_URL}/images/${image}`, path: `public/images/${image}` }
+        : { url: `${BASE_URL}/images/${dir}/${image}`, path: `public/images/${dir}/${image}` };
+    };
+
     const urls: { url: string; path: string }[] = [
-      ...result.monsters.map((m) => ({ url: `/images/monsters/${m.image}`, path: `public/images/monsters/${m.image}` })),
-      ...result.stories.map((s) => ({ url: `/images/stories/${s.image}`, path: `public/images/stories/${s.image}` })),
+      ...result.monsters.map((m) => toCheck(m.image, 'monster')),
+      ...result.stories.map((s) => toCheck(s.image, 'story')),
     ];
 
     for (const { url, path } of urls) {
@@ -26,7 +34,7 @@ test.describe('Served content pipeline (research R8, FR-022/FR-023)', () => {
   });
 
   test('the designated placeholder is reachable (FR-023)', async ({ request }) => {
-    const response = await request.get('/images/placeholders/missing.png');
+    const response = await request.get(`${BASE_URL}/images/placeholders/missing.png`);
     expect(response.status()).toBe(200);
   });
 

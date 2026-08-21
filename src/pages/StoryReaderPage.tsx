@@ -123,7 +123,7 @@ export default function StoryReaderPage() {
         </div>
 
         {/* Two-column layout */}
-        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '2rem', display: 'grid', gridTemplateColumns: '1fr 220px', gap: '4rem', alignItems: 'start' }}>
+        <div className="story-reader-layout" style={{ maxWidth: '1100px', margin: '0 auto', padding: '2rem', display: 'grid', gridTemplateColumns: '1fr 220px', gap: '4rem', alignItems: 'start' }}>
           {/* Main content */}
           <div>
             {/* Progress strip */}
@@ -174,7 +174,7 @@ export default function StoryReaderPage() {
           </div>
 
           {/* Sidebar: Table of Contents */}
-          <div style={{ position: 'sticky', top: '84px' }}>
+          <div className="story-reader-sidebar" style={{ position: 'sticky', top: '84px' }}>
             <div style={{ background: '#100e14', border: '1px solid #2e2530', padding: '1.25rem' }}>
               <p style={{ fontFamily: "'Cinzel', serif", fontSize: '0.6rem', letterSpacing: '0.25em', color: '#7a6d5a', textTransform: 'uppercase', marginBottom: '1rem', paddingBottom: '0.75rem', borderBottom: '1px solid #1c1820' }}>
                 Chapters

@@ -2,13 +2,14 @@
 title: Authoring workflow
 type: howto
 sources: [S003]
-updated: 2026-08-14
+updated: 2026-08-21
 ---
 
 # Authoring workflow
 
 Dataset content is authored by the agent on request — e.g. "10 new monsters in
-this category" — not through a CMS or manual forms. (S003)
+this category" or "20 new monsters with 2 stories each" — not through a CMS or
+manual forms. (S003)
 
 ## How it works
 
@@ -24,6 +25,20 @@ this category" — not through a CMS or manual forms. (S003)
 4. Expansion uses the same workflow at any time; adding or editing content never
    requires application code changes, because `content/index.ts` aggregates
    entries dynamically (S003).
+
+## Dataset expansion (feature 007, 2026-08-21)
+
+- The dataset was expanded from 10 monsters / 30 stories to **30 monsters /
+  70 stories** (20 canonical Witcher monsters, 2 per category, each with
+  exactly 2 stories). Roster and story-pairing plan: `specs/007-add-monsters-stories/roster.md`.
+- Authoring conventions observed during the expansion: each story centers on
+  exactly one new monster and may co-feature one existing monster; stories run
+  ~5 sections of dark-fantasy prose; monster images are scraped via the Fandom
+  API + `static.wikia.nocookie.net` CDN (the wiki frontend is Cloudflare-blocked)
+  and converted to PNG with `sips`; story images reuse the subject monster's
+  art; failed retrievals use `placeholders/missing.png` (werebear, ekimmara).
+- All content passes `npm run validate`; no application code changes were made
+  by the content feature itself.
 
 ## Gotchas
 

@@ -15,6 +15,7 @@ export default function ReadingProgressBar() {
         className="progress-bar"
         role="progressbar"
         aria-label="Reading progress"
+        style={{ width: '100%', transform: 'none' }}
       />
     );
   }
@@ -22,7 +23,7 @@ export default function ReadingProgressBar() {
   return (
     <motion.div
       className="progress-bar"
-      style={{ scaleX }}
+      style={{ scaleX, width: '100%' }}
       role="progressbar"
       aria-label="Reading progress"
     />

@@ -24,7 +24,9 @@ describe('Story schema', () => {
   });
 
   it('rejects each missing required field, naming it (FR-011)', () => {
-    for (const field of ['id', 'title', 'summary', 'content', 'monsterIds', 'image'] as const) {
+    // Required fields per the current schema: content and sections are optional
+    // (legacy content string vs migrated sections structure).
+    for (const field of ['id', 'title', 'summary', 'monsterIds', 'image'] as const) {
       const { success, error } = StorySchema.safeParse({ ...validStory, [field]: undefined });
       expect(success).toBe(false);
       expect(error!.issues.some((i) => i.path[0] === field)).toBe(true);

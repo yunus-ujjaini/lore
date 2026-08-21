@@ -4,13 +4,12 @@ export default defineConfig({
   testDir: 'tests/e2e',
   fullyParallel: true,
   use: {
-    baseURL: 'http://localhost:5173',
+    baseURL: 'http://localhost:5173/lore',
   },
   webServer: {
     command: 'npx vite dev --port 5173 --strictPort',
-    // The project has no index.html yet (UI deferred); probe a static asset
-    // that returns 200 to detect server readiness.
-    url: 'http://localhost:5173/images/placeholders/missing.png',
+    // Probe a static asset under the app base path to detect server readiness.
+    url: 'http://localhost:5173/lore/images/placeholders/missing.png',
     reuseExistingServer: true,
     timeout: 30_000,
   },
